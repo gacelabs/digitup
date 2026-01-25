@@ -476,7 +476,7 @@ section {
     background: var(--gray-100);
     border: 2px dashed var(--gray-300);
     border-radius: var(--radius);
-    padding: 3rem 2rem;
+    /* padding: 3rem 2rem; */
     text-align: center;
     color: var(--gray-400);
     font-size: 0.875rem;

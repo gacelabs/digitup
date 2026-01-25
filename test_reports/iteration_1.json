@@ -18,9 +18,9 @@
   "passed_tests": [
     "Homepage loads with correct tagline 'Unearth Your Earning Potential'",
     "Navigation links work - Home, Freelance, Surveys, Micro-Tasks, About, Contact",
-    "Category pages load correctly - freelance.html, surveys.html, microtasks.html",
-    "Tool detail pages load - upwork.html, swagbucks.html",
-    "Legal pages load - privacy.html, terms.html, disclaimer.html, about.html, sitemap.html",
+    "Category pages load correctly - freelance.html, surveys.html, microtasks",
+    "Tool detail pages load - upwork.html, swagbucks",
+    "Legal pages load - privacy.html, terms.html, disclaimer.html, about.html, sitemap",
     "Mobile navigation toggle works correctly",
     "Search functionality filters content",
     "Contact form exists with all required fields and submits",

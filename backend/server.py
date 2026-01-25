@@ -21,14 +21,14 @@ app.mount("/tools", StaticFiles(directory=os.path.join(BASE_DIR, "tools"), html=
 # Serve HTML pages from root
 @app.get("/")
 async def root():
-    return FileResponse(os.path.join(BASE_DIR, "index.html"))
+    return FileResponse(os.path.join(BASE_DIR, "index"))
 
-@app.get("/{page}.html")
+@app.get("/{page}")
 async def serve_page(page: str):
-    file_path = os.path.join(BASE_DIR, f"{page}.html")
+    file_path = os.path.join(BASE_DIR, f"{page}")
     if os.path.exists(file_path):
         return FileResponse(file_path)
-    return FileResponse(os.path.join(BASE_DIR, "index.html"))
+    return FileResponse(os.path.join(BASE_DIR, "index"))
 
 @app.get("/health")
 async def health():
