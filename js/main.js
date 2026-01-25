@@ -419,6 +419,6 @@ $(document).ready(function() {
     // CONSOLE MESSAGE
     // ============================================
     console.log('%c Dig it Up ', 'background: #16a34a; color: white; font-size: 16px; padding: 8px 16px; border-radius: 4px;');
-    console.log('Unearth Your Earning Potential - https://digitup.com');
+    console.log('Unearth Your Earning Potential - ' + window.location.origin);
 
 });
