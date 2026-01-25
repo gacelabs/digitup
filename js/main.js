@@ -79,6 +79,10 @@ $(document).ready(function() {
                 $card.hide();
             }
         });
+
+		$('html, body').animate({
+			scrollTop: $('.tools-grid').parent('.container').offset().top - 100
+		}, 300);
     }
 
     $heroSearchBtn.on('click', function() {
