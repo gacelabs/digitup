@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dig it Up - Discover legitimate online tools, freelance platforms, surveys, and micro-tasks to earn extra income from home. Your trusted directory for side hustle opportunities.">
+    <meta name="keywords" content="earn money online, side income, freelance platforms, online surveys, micro-tasks, work from home, passive income, remote work">
+    <meta name="author" content="Dig it Up">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dig it Up - Unearth Your Earning Potential">
+    <meta property="og:description" content="Your trusted directory for legitimate online earning opportunities. Find freelance gigs, surveys, and micro-tasks.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digitup.com">
+    <meta property="og:image" content="images/og-image.jpg">
+    
+    <title>Dig it Up - Unearth Your Earning Potential | Online Earning Directory</title>
+    
+    <link rel="canonical" href="https://digitup.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo" data-testid="logo">
+                    <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="14" fill="#22c55e"/>
+                        <path d="M16 8L18 14H24L19 18L21 24L16 20L11 24L13 18L8 14H14L16 8Z" fill="white"/>
+                    </svg>
+                    <span>Dig it Up</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" data-testid="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu" data-testid="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="categories/freelance.html">Freelance</a></li>
+                    <li><a href="categories/surveys.html">Surveys</a></li>
+                    <li><a href="categories/microtasks.html">Micro-Tasks</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" data-testid="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Unearth Your <span class="highlight">Earning Potential</span></h1>
+                <p class="hero-subtitle">Your trusted directory for legitimate online earning opportunities. We've researched, tested, and curated the best platforms to help you earn extra income from home.</p>
+                <div class="hero-search">
+                    <input type="text" id="heroSearch" placeholder="Search for earning opportunities..." data-testid="hero-search">
+                    <button type="button" id="heroSearchBtn" data-testid="hero-search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Verified Tools</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free to Use</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories-section" data-testid="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Categories</h2>
+                <p>Find the perfect earning opportunity that matches your skills and available time.</p>
+            </div>
+            <div class="categories-grid">
+                <a href="categories/freelance.html" class="category-card" data-testid="category-freelance">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 7h-9"></path>
+                            <path d="M14 17H5"></path>
+                            <circle cx="17" cy="17" r="3"></circle>
+                            <circle cx="7" cy="7" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Freelance Platforms</h3>
+                    <p>Connect with clients worldwide and offer your professional services on trusted platforms.</p>
+                    <span class="category-count">8 Tools</span>
+                </a>
+                <a href="categories/surveys.html" class="category-card" data-testid="category-surveys">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                    </div>
+                    <h3>Paid Surveys</h3>
+                    <p>Share your opinions and get paid. Legitimate survey sites that actually pay.</p>
+                    <span class="category-count">7 Tools</span>
+                </a>
+                <a href="categories/microtasks.html" class="category-card" data-testid="category-microtasks">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <h3>Micro-Tasks</h3>
+                    <p>Complete small tasks in your spare time and earn money with minimal effort.</p>
+                    <span class="category-count">6 Tools</span>
+                </a>
+                <a href="categories/passive-income.html" class="category-card" data-testid="category-passive">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>Passive Income</h3>
+                    <p>Set it and forget it. Platforms that help you earn money while you sleep.</p>
+                    <span class="category-count">4 Tools</span>
+                </a>
+                <a href="categories/selling.html" class="category-card" data-testid="category-selling">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+                    <h3>Sell Online</h3>
+                    <p>Turn your creativity into cash. Platforms to sell products, designs, and digital goods.</p>
+                    <span class="category-count">5 Tools</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Space Placeholder -->
+    <div class="ad-space" data-testid="ad-space-1">
+        <div class="container">
+            <div class="ad-placeholder">
+                <!-- Google AdSense Ad Unit Will Be Placed Here -->
+                <span>Advertisement</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Tools -->
+    <section class="featured-section" data-testid="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Earning Tools</h2>
+                <p>Hand-picked platforms that offer the best earning potential for beginners and experienced users alike.</p>
+            </div>
+            <div class="tools-grid" id="featuredTools">
+                <!-- Tool Card 1 -->
+                <article class="tool-card" data-category="freelance" data-testid="tool-upwork">
+                    <div class="tool-badge">Popular</div>
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: #14a800;">U</div>
+                        <div class="tool-meta">
+                            <h3><a href="tools/upwork.html">Upwork</a></h3>
+                            <span class="tool-category">Freelance</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">The world's largest freelance marketplace connecting professionals with clients seeking skilled talent for various projects.</p>
+                    <div class="tool-earning">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <span>$15 - $150+/hour</span>
+                    </div>
+                    <a href="tools/upwork.html" class="tool-link">Learn More →</a>
+                </article>
+
+                <!-- Tool Card 2 -->
+                <article class="tool-card" data-category="surveys" data-testid="tool-swagbucks">
+                    <div class="tool-badge">Beginner Friendly</div>
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: #005baa;">S</div>
+                        <div class="tool-meta">
+                            <h3><a href="tools/swagbucks.html">Swagbucks</a></h3>
+                            <span class="tool-category">Surveys</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Earn rewards for everyday activities like taking surveys, watching videos, shopping online, and searching the web.</p>
+                    <div class="tool-earning">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <span>$50 - $200/month</span>
+                    </div>
+                    <a href="tools/swagbucks.html" class="tool-link">Learn More →</a>
+                </article>
+
+                <!-- Tool Card 3 -->
+                <article class="tool-card" data-category="microtasks" data-testid="tool-mturk">
+                    <div class="tool-badge">Trusted</div>
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: #ff9900;">A</div>
+                        <div class="tool-meta">
+                            <h3><a href="tools/amazon-mturk.html">Amazon MTurk</a></h3>
+                            <span class="tool-category">Micro-Tasks</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Complete Human Intelligence Tasks (HITs) for Amazon and earn money for small tasks that require human judgment.</p>
+                    <div class="tool-earning">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <span>$100 - $500/month</span>
+                    </div>
+                    <a href="tools/amazon-mturk.html" class="tool-link">Learn More →</a>
+                </article>
+
+                <!-- Tool Card 4 -->
+                <article class="tool-card" data-category="freelance" data-testid="tool-fiverr">
+                    <div class="tool-badge">Growing Fast</div>
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: #1dbf73;">F</div>
+                        <div class="tool-meta">
+                            <h3><a href="tools/fiverr.html">Fiverr</a></h3>
+                            <span class="tool-category">Freelance</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Create service packages (gigs) and let clients come to you. Perfect for creative professionals and specialists.</p>
+                    <div class="tool-earning">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <span>$5 - $500+/gig</span>
+                    </div>
+                    <a href="tools/fiverr.html" class="tool-link">Learn More →</a>
+                </article>
+
+                <!-- Tool Card 5 -->
+                <article class="tool-card" data-category="passive" data-testid="tool-honeygain">
+                    <div class="tool-badge">Passive</div>
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: #ffc107;">H</div>
+                        <div class="tool-meta">
+                            <h3><a href="tools/honeygain.html">Honeygain</a></h3>
+                            <span class="tool-category">Passive Income</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Share your unused internet bandwidth and earn passive income. Runs quietly in the background on your devices.</p>
+                    <div class="tool-earning">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <span>$20 - $50/month</span>
+                    </div>
+                    <a href="tools/honeygain.html" class="tool-link">Learn More →</a>
+                </article>
+
+                <!-- Tool Card 6 -->
+                <article class="tool-card" data-category="selling" data-testid="tool-etsy">
+                    <div class="tool-badge">Creative</div>
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: #f56400;">E</div>
+                        <div class="tool-meta">
+                            <h3><a href="tools/etsy.html">Etsy</a></h3>
+                            <span class="tool-category">Sell Online</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Sell handmade items, vintage goods, and craft supplies to millions of buyers looking for unique products.</p>
+                    <div class="tool-earning">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <span>$100 - $10,000+/month</span>
+                    </div>
+                    <a href="tools/etsy.html" class="tool-link">Learn More →</a>
+                </article>
+            </div>
+            <div class="section-cta">
+                <a href="sitemap.html" class="btn btn-outline" data-testid="view-all-tools">View All Tools</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" data-testid="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Dig it Up Helps You Earn</h2>
+                <p>We do the research so you can focus on earning. Here's our process.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>We Research</h3>
+                    <p>Our team thoroughly investigates each platform, checking legitimacy, payment history, and user reviews.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Verify</h3>
+                    <p>Only platforms with proven track records, transparent terms, and actual payouts make it to our directory.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>We Organize</h3>
+                    <p>Tools are categorized by earning type, skill level, and time investment to help you find the perfect fit.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>You Earn</h3>
+                    <p>Pick your platform, sign up, and start earning. We provide tips and guides to maximize your income.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content-section" data-testid="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <article class="main-content">
+                    <h2>Welcome to Dig it Up: Your Trusted Guide to Online Earning</h2>
+                    
+                    <p>In today's digital economy, opportunities to earn extra income from home have never been more accessible. Whether you're looking to supplement your primary income, save for a specific goal, or transition to remote work entirely, the internet offers countless legitimate pathways to financial growth. However, navigating this landscape can be overwhelming and risky without proper guidance.</p>
+
+                    <p>That's exactly why we created <strong>Dig it Up</strong> – a comprehensive, carefully curated directory of online earning tools and platforms. Unlike generic lists that include every platform under the sun, we take a different approach. Every tool and platform featured in our directory has been researched, verified, and evaluated based on real user experiences, payment reliability, and earning potential.</p>
+
+                    <h3>What Makes Dig it Up Different?</h3>
+                    
+                    <p>The internet is full of "get rich quick" schemes and platforms that promise the moon but deliver nothing but frustration. We've all seen the flashy ads promising thousands of dollars overnight with minimal effort. The reality is that legitimate online earning requires time, effort, and the right tools.</p>
+
+                    <p>At Dig it Up, we focus exclusively on <strong>legitimate, proven platforms</strong> that have established track records. We don't feature any platform that:</p>
+                    
+                    <ul>
+                        <li>Requires upfront payment or investment to join</li>
+                        <li>Makes unrealistic income promises</li>
+                        <li>Has a history of non-payment or delayed payments</li>
+                        <li>Uses deceptive marketing practices</li>
+                        <li>Operates in legal gray areas</li>
+                    </ul>
+
+                    <h3>Who Can Benefit From Our Directory?</h3>
+                    
+                    <p>Our directory is designed to help a wide range of people looking to earn extra income online:</p>
+
+                    <p><strong>Students</strong> looking for flexible work that fits around their class schedule can find survey sites and micro-task platforms that pay for small amounts of time. These platforms are perfect for earning spending money without committing to fixed hours.</p>
+
+                    <p><strong>Stay-at-home parents</strong> can explore opportunities that work around childcare responsibilities. Many platforms allow you to work in short bursts whenever you have free time, making them ideal for unpredictable schedules.</p>
+
+                    <p><strong>Professionals</strong> seeking to diversify their income streams will find freelance platforms where they can monetize their existing skills. From writing and design to programming and consulting, there's demand for virtually every professional skill.</p>
+
+                    <p><strong>Retirees</strong> looking to stay active and supplement their retirement income can find low-stress opportunities that provide both mental engagement and financial rewards.</p>
+
+                    <h3>Our Categories Explained</h3>
+                    
+                    <p>We've organized our directory into five main categories to help you find opportunities that match your skills, interests, and available time:</p>
+
+                    <p><strong>Freelance Platforms</strong> connect skilled professionals with clients seeking specific services. If you have marketable skills like writing, design, programming, marketing, or consulting, these platforms can help you find paid projects. Earnings vary widely based on your expertise and the time you invest.</p>
+
+                    <p><strong>Paid Surveys</strong> offer a low-barrier entry point for online earning. Market research companies pay real money for consumer opinions. While individual surveys don't pay much, consistent participation can add up to meaningful supplementary income over time.</p>
+
+                    <p><strong>Micro-Tasks</strong> involve completing small, simple tasks that typically take minutes to finish. These include data entry, image tagging, transcription snippets, and more. They're perfect for earning in spare moments throughout the day.</p>
+
+                    <p><strong>Passive Income</strong> platforms allow you to earn with minimal ongoing effort. These include apps that pay you to share bandwidth, cashback programs, and investment platforms. While individual earnings are typically modest, they require little to no active work.</p>
+
+                    <p><strong>Sell Online</strong> platforms help you monetize products, whether physical goods, digital downloads, or creative services. If you make things or have items to sell, these platforms connect you with buyers worldwide.</p>
+
+                    <h3>Setting Realistic Expectations</h3>
+                    
+                    <p>We believe in complete transparency about earning potential. While some people do earn significant income from online platforms, it's important to understand that:</p>
+
+                    <ul>
+                        <li>Most platforms work best as <strong>supplementary income</strong>, not primary income replacement</li>
+                        <li>Earnings typically scale with the time and effort you invest</li>
+                        <li>Building sustainable income takes time – overnight success is the exception, not the rule</li>
+                        <li>Your location, skills, and available time all affect earning potential</li>
+                    </ul>
+
+                    <p>We provide realistic earning ranges for each platform based on actual user reports, so you can make informed decisions about where to invest your time.</p>
+
+                    <h3>Start Your Journey Today</h3>
+                    
+                    <p>Browse our categories, explore individual platform reviews, and find the opportunities that best match your situation. Every journey to financial improvement starts with a single step – and we're here to help you take that step confidently.</p>
+
+                    <p>Remember to bookmark Dig it Up and check back regularly. We continuously update our directory with new platforms, remove underperforming options, and refine our recommendations based on the latest user feedback and industry changes.</p>
+                </article>
+
+                <aside class="sidebar">
+                    <!-- Ad Space -->
+                    <div class="ad-placeholder sidebar-ad">
+                        <span>Advertisement</span>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="sidebar-widget">
+                        <h4>Quick Start Guides</h4>
+                        <ul class="quick-links">
+                            <li><a href="categories/freelance.html">Best Freelance Platforms for Beginners</a></li>
+                            <li><a href="categories/surveys.html">Top Paying Survey Sites</a></li>
+                            <li><a href="categories/microtasks.html">Micro-Tasks That Actually Pay</a></li>
+                            <li><a href="categories/passive-income.html">Passive Income Apps Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tips Widget -->
+                    <div class="sidebar-widget tips-widget">
+                        <h4>Pro Tips</h4>
+                        <ul>
+                            <li>Start with one platform and master it before adding more</li>
+                            <li>Track your time and earnings to find your best hourly rate</li>
+                            <li>Read platform terms carefully before signing up</li>
+                            <li>Never pay to join a legitimate earning platform</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" data-testid="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Got questions? We've got answers.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Are these platforms really free to join?</h3>
+                    <p>Yes, all platforms featured in our directory are free to join. We never recommend platforms that require upfront payment or investment. If a platform asks for money to get started, that's a major red flag.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How much money can I realistically earn?</h3>
+                    <p>Earnings vary widely depending on the platform, your skills, and time invested. Survey sites might earn you $50-200/month, while skilled freelancers can earn thousands. We provide realistic earning ranges for each platform.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do you choose which platforms to feature?</h3>
+                    <p>We evaluate platforms based on payment reliability, user reviews, company reputation, earning potential, and ease of use. Only platforms that meet our quality standards are included in the directory.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are there any age or location requirements?</h3>
+                    <p>Most platforms require users to be 18+ years old. Location availability varies by platform – some are US-only while others are international. We note these restrictions in our individual reviews.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How quickly will I get paid?</h3>
+                    <p>Payment timelines vary by platform. Some pay daily or weekly, while others have monthly payout cycles. Most platforms have minimum payout thresholds ranging from $1 to $50. Check individual reviews for specifics.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is online earning safe?</h3>
+                    <p>When using legitimate platforms like those in our directory, yes. However, always protect your personal information, never share passwords, and be wary of opportunities that seem too good to be true.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section" data-testid="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get notified when we add new platforms or update our recommendations.</p>
+                <form class="newsletter-form" id="newsletterForm" data-testid="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required data-testid="newsletter-email">
+                    <button type="submit" data-testid="newsletter-submit">Subscribe</button>
+                </form>
+                <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-testid="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" fill="#22c55e"/>
+                            <path d="M16 8L18 14H24L19 18L21 24L16 20L11 24L13 18L8 14H14L16 8Z" fill="white"/>
+                        </svg>
+                        <span>Dig it Up</span>
+                    </a>
+                    <p>Your trusted directory for legitimate online earning opportunities. Helping you unearth your earning potential since 2024.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories/freelance.html">Freelance Platforms</a></li>
+                        <li><a href="categories/surveys.html">Paid Surveys</a></li>
+                        <li><a href="categories/microtasks.html">Micro-Tasks</a></li>
+                        <li><a href="categories/passive-income.html">Passive Income</a></li>
+                        <li><a href="categories/selling.html">Sell Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dig it Up. All rights reserved.</p>
+                <p>Dig it Up is an independent directory. We may earn commissions from some links.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" data-testid="scroll-top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
