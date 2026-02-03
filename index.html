@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 	<link rel="shortcut icon" href="images/logo-a.png" type="image/x-icon">
 
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3716182521515143"
@@ -42,9 +42,9 @@
                 </button>
                 <ul class="nav-menu" id="navMenu" data-testid="nav-menu">
                     <li><a href="/" class="active">Home</a></li>
-                    <li><a href="categories/freelance">Freelance</a></li>
-                    <li><a href="categories/surveys">Surveys</a></li>
-                    <li><a href="categories/microtasks">Micro-Tasks</a></li>
+                    <li><a href="/categories/freelance">Freelance</a></li>
+                    <li><a href="/categories/surveys">Surveys</a></li>
+                    <li><a href="/categories/microtasks">Micro-Tasks</a></li>
                     <li><a href="about">About</a></li>
                     <li><a href="contact">Contact</a></li>
                 </ul>
@@ -93,7 +93,7 @@
                 <p>Find the perfect earning opportunity that matches your skills and available time.</p>
             </div>
             <div class="categories-grid">
-                <a href="categories/freelance" class="category-card" data-testid="category-freelance">
+                <a href="/categories/freelance" class="category-card" data-testid="category-freelance">
                     <div class="category-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M20 7h-9"></path>
@@ -106,7 +106,7 @@
                     <p>Connect with clients worldwide and offer your professional services on trusted platforms.</p>
                     <span class="category-count">8 Tools</span>
                 </a>
-                <a href="categories/surveys" class="category-card" data-testid="category-surveys">
+                <a href="/categories/surveys" class="category-card" data-testid="category-surveys">
                     <div class="category-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 11l3 3L22 4"></path>
@@ -117,7 +117,7 @@
                     <p>Share your opinions and get paid. Legitimate survey sites that actually pay.</p>
                     <span class="category-count">7 Tools</span>
                 </a>
-                <a href="categories/microtasks" class="category-card" data-testid="category-microtasks">
+                <a href="/categories/microtasks" class="category-card" data-testid="category-microtasks">
                     <div class="category-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="3" y="3" width="7" height="7"></rect>
@@ -130,7 +130,7 @@
                     <p>Complete small tasks in your spare time and earn money with minimal effort.</p>
                     <span class="category-count">6 Tools</span>
                 </a>
-                <a href="categories/passive-income" class="category-card" data-testid="category-passive">
+                <a href="/categories/passive-income" class="category-card" data-testid="category-passive">
                     <div class="category-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="12" y1="1" x2="12" y2="23"></line>
@@ -141,7 +141,7 @@
                     <p>Set it and forget it. Platforms that help you earn money while you sleep.</p>
                     <span class="category-count">4 Tools</span>
                 </a>
-                <a href="categories/selling" class="category-card" data-testid="category-selling">
+                <a href="/categories/selling" class="category-card" data-testid="category-selling">
                     <div class="category-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="9" cy="21" r="1"></circle>
@@ -180,7 +180,9 @@
                 <article class="tool-card" data-category="freelance" data-testid="tool-upwork">
                     <div class="tool-badge">Popular</div>
                     <div class="tool-header">
-                        <div class="tool-icon" style="background: #14a800;">U</div>
+                        <div class="tool-icon">
+							<img src="/images/tools/upwork.png" alt="Upwork Logo" class="tool-logo-img">
+						</div>
                         <div class="tool-meta">
                             <h3><a href="tools/upwork">Upwork</a></h3>
                             <span class="tool-category">Freelance</span>
@@ -201,7 +203,9 @@
                 <article class="tool-card" data-category="surveys" data-testid="tool-swagbucks">
                     <div class="tool-badge">Beginner Friendly</div>
                     <div class="tool-header">
-                        <div class="tool-icon" style="background: #005baa;">S</div>
+                        <div class="tool-icon">>
+							<img src="/images/tools/swagbucks.png" alt="Swagbucks Logo" class="tool-logo-img">
+						</div>
                         <div class="tool-meta">
                             <h3><a href="tools/swagbucks">Swagbucks</a></h3>
                             <span class="tool-category">Surveys</span>
@@ -222,7 +226,9 @@
                 <article class="tool-card" data-category="microtasks" data-testid="tool-mturk">
                     <div class="tool-badge">Trusted</div>
                     <div class="tool-header">
-                        <div class="tool-icon" style="background: #ff9900;">A</div>
+                        <div class="tool-icon">
+							<img src="/images/tools/amazon-mturk.png" alt="Amazon MTurk Logo" class="tool-logo-img">
+						</div>
                         <div class="tool-meta">
                             <h3><a href="tools/amazon-mturk">Amazon MTurk</a></h3>
                             <span class="tool-category">Micro-Tasks</span>
@@ -243,7 +249,9 @@
                 <article class="tool-card" data-category="freelance" data-testid="tool-fiverr">
                     <div class="tool-badge">Growing Fast</div>
                     <div class="tool-header">
-                        <div class="tool-icon" style="background: #1dbf73;">F</div>
+                        <div class="tool-icon">
+							<img src="/images/tools/fiverr.png" alt="Fiverr Logo" class="tool-logo-img">
+						</div>
                         <div class="tool-meta">
                             <h3><a href="tools/fiverr">Fiverr</a></h3>
                             <span class="tool-category">Freelance</span>
@@ -264,7 +272,9 @@
                 <article class="tool-card" data-category="passive" data-testid="tool-honeygain">
                     <div class="tool-badge">Passive</div>
                     <div class="tool-header">
-                        <div class="tool-icon" style="background: #ffc107;">H</div>
+                        <div class="tool-icon">
+							<img src="/images/tools/honeygain.ico" alt="Honeygain Logo" class="tool-logo-img">
+						</div>
                         <div class="tool-meta">
                             <h3><a href="tools/honeygain">Honeygain</a></h3>
                             <span class="tool-category">Passive Income</span>
@@ -285,7 +295,9 @@
                 <article class="tool-card" data-category="selling" data-testid="tool-etsy">
                     <div class="tool-badge">Creative</div>
                     <div class="tool-header">
-                        <div class="tool-icon" style="background: #f56400;">E</div>
+                        <div class="tool-icon">
+							<img src="/images/tools/etsy.png" alt="Etsy Logo" class="tool-logo-img">
+						</div>
                         <div class="tool-meta">
                             <h3><a href="tools/etsy">Etsy</a></h3>
                             <span class="tool-category">Sell Online</span>
@@ -421,10 +433,10 @@
                     <div class="sidebar-widget">
                         <h4>Quick Start Guides</h4>
                         <ul class="quick-links">
-                            <li><a href="categories/freelance">Best Freelance Platforms for Beginners</a></li>
-                            <li><a href="categories/surveys">Top Paying Survey Sites</a></li>
-                            <li><a href="categories/microtasks">Micro-Tasks That Actually Pay</a></li>
-                            <li><a href="categories/passive-income">Passive Income Apps Guide</a></li>
+                            <li><a href="/categories/freelance">Best Freelance Platforms for Beginners</a></li>
+                            <li><a href="/categories/surveys">Top Paying Survey Sites</a></li>
+                            <li><a href="/categories/microtasks">Micro-Tasks That Actually Pay</a></li>
+                            <li><a href="/categories/passive-income">Passive Income Apps Guide</a></li>
                         </ul>
                     </div>
 
@@ -486,9 +498,16 @@
                 <h2>Stay Updated</h2>
                 <p>Get notified when we add new platforms or update our recommendations.</p>
                 <form class="newsletter-form" id="newsletterForm" data-testid="newsletter-form">
-                    <input type="email" placeholder="Enter your email" required data-testid="newsletter-email">
+					<div class="newsletter-form-group">
+						<input type="email" name="email" placeholder="Enter your email" data-testid="newsletter-email">
+						<span class="field-message"></span>
+					</div>
                     <button type="submit" data-testid="newsletter-submit">Subscribe</button>
                 </form>
+				<div class="captcha-group" style="margin-top: 0.7rem;">
+					<div class="g-recaptcha" data-sitekey="6LcOM10sAAAAAJEMWOWiiNqsiQkrAmqRnfOZZQPG"></div>
+					<span class="field-message"></span>
+				</div>
                 <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
             </div>
         </div>
@@ -500,18 +519,18 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index" class="footer-logo">
-                        <img src="../images/logo-a.png" alt="logo" style="width: 5rem;">
+                        <img src="/images/logo-a.png" alt="logo" style="width: 5rem;">
                     </a>
                     <p>Your trusted directory for legitimate online earning opportunities. Helping you unearth your earning potential since 2024.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Categories</h4>
                     <ul>
-                        <li><a href="categories/freelance">Freelance Platforms</a></li>
-                        <li><a href="categories/surveys">Paid Surveys</a></li>
-                        <li><a href="categories/microtasks">Micro-Tasks</a></li>
-                        <li><a href="categories/passive-income">Passive Income</a></li>
-                        <li><a href="categories/selling">Sell Online</a></li>
+                        <li><a href="/categories/freelance">Freelance Platforms</a></li>
+                        <li><a href="/categories/surveys">Paid Surveys</a></li>
+                        <li><a href="/categories/microtasks">Micro-Tasks</a></li>
+                        <li><a href="/categories/passive-income">Passive Income</a></li>
+                        <li><a href="/categories/selling">Sell Online</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -545,8 +564,9 @@
         </svg>
     </button>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/main.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/main.js"></script>
 	<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>

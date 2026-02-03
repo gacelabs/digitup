@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 	<link rel="shortcut icon" href="images/logo-a.png" type="image/x-icon">
 
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3716182521515143"
@@ -23,9 +23,9 @@
                 <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="/">Home</a></li>
-                    <li><a href="categories/freelance">Freelance</a></li>
-                    <li><a href="categories/surveys">Surveys</a></li>
-                    <li><a href="categories/microtasks">Micro-Tasks</a></li>
+                    <li><a href="/categories/freelance">Freelance</a></li>
+                    <li><a href="/categories/surveys">Surveys</a></li>
+                    <li><a href="/categories/microtasks">Micro-Tasks</a></li>
                     <li><a href="about">About</a></li>
                     <li><a href="contact" class="active">Contact</a></li>
                 </ul>
@@ -52,12 +52,14 @@
                     <form id="contactForm" data-testid="contact-form">
                         <div class="form-group">
                             <label for="contactName">Your Name *</label>
-                            <input type="text" id="contactName" name="name" required placeholder="John Doe" data-testid="contact-name">
+                            <input type="text" id="contactName" name="name" placeholder="John Doe" data-testid="contact-name">
+							<span class="field-message"></span>
                         </div>
                         
                         <div class="form-group">
                             <label for="contactEmail">Email Address *</label>
-                            <input type="email" id="contactEmail" name="email" required placeholder="john@example.com" data-testid="contact-email">
+                            <input type="email" id="contactEmail" name="email" placeholder="john@example.com" data-testid="contact-email">
+							<span class="field-message"></span>
                         </div>
                         
                         <div class="form-group">
@@ -71,14 +73,21 @@
                                 <option value="partnership">Partnership/Business</option>
                                 <option value="other">Other</option>
                             </select>
+							<span class="field-message"></span>
                         </div>
                         
                         <div class="form-group">
                             <label for="contactMessage">Your Message *</label>
-                            <textarea id="contactMessage" name="message" required placeholder="How can we help you?" data-testid="contact-message"></textarea>
+                            <textarea id="contactMessage" name="message" placeholder="How can we help you?" data-testid="contact-message"></textarea>
+							<span class="field-message"></span>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary" data-testid="contact-submit">Send Message</button>
+
+						<div class="form-group captcha-group">
+							<input type="text" name="honeypot" style="display:none"/>
+							<div class="g-recaptcha" data-sitekey="6LcOM10sAAAAAJEMWOWiiNqsiQkrAmqRnfOZZQPG"></div>
+							<span class="field-message"></span>
+							<button type="submit" class="btn btn-primary" data-testid="contact-submit">Send Message</button>
+						</div>
                     </form>
                 </div>
 
@@ -92,7 +101,7 @@
                         </div>
                         <div class="contact-info-content">
                             <h4>Email Us</h4>
-                            <p>gacelabs.inc@gmail.com</p>
+                            <p>digituponline@gmail.com</p>
                             <p>For general inquiries and support</p>
                         </div>
                     </div>
@@ -135,7 +144,7 @@
                         </div>
                         <div class="contact-info-content">
                             <h4>Legal Inquiries</h4>
-                            <p>gacelabs.inc@gmail.com</p>
+                            <p>digituponline@gmail.com</p>
                             <p>For legal or compliance matters</p>
                         </div>
                     </div> -->
@@ -182,7 +191,8 @@
     </footer>
 
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/main.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

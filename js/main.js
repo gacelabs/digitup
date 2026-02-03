@@ -283,21 +283,56 @@ $(document).ready(function() {
         const $button = $(this).find('button');
         const email = $input.val();
 
-        if (!email) return;
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!email.trim() || !emailRegex.test(email.trim())) {
+			showMessage($input, 'Please enter a valid email address.', 'error');
+			return;
+		}
+
+		if (!grecaptcha.getResponse()) {
+			showMessage($('.g-recaptcha').next(), 'Please complete the reCAPTCHA verification.', 'error', true);
+			return;
+		}
 
         // Simulate form submission
-        $button.text('Subscribing...').prop('disabled', true);
-
-        setTimeout(function() {
-            $button.text('Subscribed!');
-            $input.val('');
-            
-            setTimeout(function() {
-                $button.text('Subscribe').prop('disabled', false);
-            }, 2000);
-        }, 1000);
+		$button.text('Subscribing...').prop('disabled', true);
+		submitQuote(e, function () {
+			$button.text('Subscribed!');
+			showMessage($input, 'Thank you for subscribing! We\'ll send you helpful tips for growing your business online.', 'success', function() {
+				$input.val('');
+				$button.text('Subscribe').prop('disabled', false);
+			});
+		}, function (message) {
+			$button.prop('disabled', false).text('Subscribe');
+			showMessage($('.g-recaptcha').next(), message, 'error', true);
+			$('.g-recaptcha > div').css({ border: 'none' });
+		}, function (formData) {
+			$('#g-recaptcha-response').val(grecaptcha.getResponse());
+			formData.append('g-recaptcha-response', grecaptcha.getResponse());
+		});
     });
 
+	function showMessage($input, message, sClass, fnOptional) {
+		if (sClass == undefined) sClass = 'error';
+		const $group = $input.closest('.form-group').length ? $input.closest('.form-group') : $input.parent();
+		if (typeof fnOptional == 'boolean' && fnOptional == true) {
+			$input.prev().find('>div').stop().addClass(sClass);
+		} else {
+			$input.stop().addClass(sClass);
+		}
+		$group.find('.field-message').stop().addClass(sClass).text(message).show().delay(5000).fadeOut(1000, function () {
+			if (typeof fnOptional == 'boolean' && fnOptional == true) {
+				$input.prev().find('>div').removeClass(sClass);
+			} else {
+				$input.removeClass(sClass);
+			}
+			$group.find('.field-message').stop().hide().removeClass(sClass);
+			if (typeof fnOptional === 'function') {
+				fnOptional($input, message, sClass);
+			}
+		});
+	}
+	
     // ============================================
     // CONTACT FORM
     // ============================================
@@ -305,7 +340,8 @@ $(document).ready(function() {
 
     $contactForm.on('submit', function(e) {
         e.preventDefault();
-        
+
+		let isValid = true;
         const $button = $(this).find('button[type="submit"]');
         const formData = {
             name: $('#contactName').val(),
@@ -315,23 +351,101 @@ $(document).ready(function() {
         };
 
         // Validate
-        if (!formData.name || !formData.email || !formData.message) {
-            alert('Please fill in all required fields.');
-            return;
-        }
+		for (const [key, value] of Object.entries(formData)) {
+			// console.log(`${key}: ${value}`, !value.trim());
+			switch (key) {
+				case 'name':
+					if (!value.trim()) {
+						showMessage($('#contactName'), 'Please enter your name.', 'error');
+						isValid = false;
+					}
+				break;
+				case 'email':
+					const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+					if (!value.trim() || !emailRegex.test(value.trim())) {
+						showMessage($('#contactEmail'), 'Please enter a valid email address.', 'error');
+						isValid = false;
+					}
+				break;
+				case 'subject':
+					if (!value.trim()) {
+						showMessage($('#contactSubject'), 'Please select a valid subject.', 'error');
+						isValid = false;
+					}
+				break;
+				case 'message':
+					if (!value.trim()) {
+						showMessage($('#contactMessage'), 'Please enter your message.', 'error');
+						isValid = false;
+					} else if (value.trim().length < 20) {
+						showMessage($('#contactMessage'), 'Please provide more details (at least 20 characters)', 'error');
+						isValid = false;
+					}
+				break;
+			}
+		}
 
-        // Simulate form submission
-        $button.text('Sending...').prop('disabled', true);
+		if (!grecaptcha.getResponse()) {
+			showMessage($('.g-recaptcha').next(), 'Please complete the reCAPTCHA verification.', 'error', true);
+			isValid = false;
+		}
 
-        setTimeout(function() {
-            $button.text('Message Sent!');
-            $contactForm[0].reset();
-            
-            setTimeout(function() {
-                $button.text('Send Message').prop('disabled', false);
-            }, 2000);
-        }, 1000);
+		if (isValid) {
+			// Simulate form submission
+			$button.text('Sending...').prop('disabled', true);
+			submitQuote(e, function () {
+				$button.text('Message Sent!');
+				showMessage($('.g-recaptcha').next(), 'Message sent successfully!', 'success', function () {
+					$button.text('Send Message').prop('disabled', false);
+					$contactForm[0].reset();
+				});
+			}, function (message) {
+				$button.prop('disabled', false).text('Send Message');
+				showMessage($('.g-recaptcha').next(), message, 'error');
+				$('.g-recaptcha > div').css({ border: 'none' });
+			});
+		}
     });
+
+	async function submitQuote(e, successCallback, errorCallback, optionalCallback) {
+		$('.g-recaptcha > div').css({ border: 'none' });
+
+		const form = e.target;
+		const formData = new FormData(form);
+		formData.append('apiKey', 'sf_a2f22ad1m153i3hhjfn6hba3');
+
+		if (typeof optionalCallback === 'function') {
+			optionalCallback(formData);
+		}
+
+		const jsonObject = Object.fromEntries(formData.entries());
+		// console.log('Form Data:', Object.fromEntries(formData.entries()));
+
+		try {
+			const response = await fetch('https://api.staticforms.dev/submit', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(jsonObject),
+			});
+
+			const result = await response.json();
+			// console.log('API Response:', result);
+
+			if (result.success || (result.message && result.message.toLowerCase().indexOf('successfully') !== -1)) {
+				successCallback();
+				form.reset();
+			} else {
+				if (result.error && result.error.toLowerCase().indexOf('captcha verification failed') !== -1) {
+					$('.g-recaptcha > div').css({ border: '1px solid #DC3545' });
+				}
+				errorCallback('Error: ' + result.error || 'Failed to submit the form. Please try again later.');
+			}
+		} catch (error) {
+			errorCallback('An error occurred while submitting the form. Please try again later.');
+		}
+	}
 
     // ============================================
     // SMOOTH SCROLL FOR ANCHOR LINKS
